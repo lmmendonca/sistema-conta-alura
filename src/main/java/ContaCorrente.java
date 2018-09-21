@@ -4,6 +4,8 @@ public class ContaCorrente extends Conta {
         super(saldo, agencia, numero, titular);
     }
 
-
-
+    @Override
+    public boolean saca(double valor) {
+        return super.saca(valor + 0.20);
+    }
 }
