@@ -55,28 +55,28 @@ public class ValidacoesBanco {
                 "Leonardo", "08662040918", "6213078", endereco1, "solteiro",
                 "Estudante", "02/06/1999", "lmmendonca@gmail.com");
 
-        Conta conta = new Conta(100.0, 1, 123456, cliente);
+        ContaCorrente contaCorrente = new ContaCorrente(100.0, 1, 123456, cliente);
 
-        Assertions.assertEquals(100.0, conta.getSaldo());
-        Assertions.assertEquals(1, conta.getAgencia());
-        Assertions.assertEquals(123456, conta.getNumero());
-        Assertions.assertEquals("Leonardo", conta.getTitular().getNome());
+        Assertions.assertEquals(100.0, contaCorrente.getSaldo());
+        Assertions.assertEquals(1, contaCorrente.getAgencia());
+        Assertions.assertEquals(123456, contaCorrente.getNumero());
+        Assertions.assertEquals("Leonardo", contaCorrente.getTitular().getNome());
     }
 
     @Test
     public void traferencia_entre_contas() {
-        Conta conta1 = new Conta(100.0, 1, 123456, this.cliente1);
-        Conta conta2 = new Conta(100.0, 1, 123456, this.cliente2);
+        ContaCorrente conta1 = new ContaCorrente(100.0, 1, 123456, this.cliente1);
+        ContaCorrente conta2 = new ContaCorrente(100.0, 1, 123456, this.cliente2);
 
         Assertions.assertTrue(conta1.transferencia(conta2, 50));
 
-        Assertions.assertEquals(50.0, conta1.getSaldo());
+        Assertions.assertEquals(49.8, conta1.getSaldo());
         Assertions.assertEquals(150.0, conta2.getSaldo());
     }
 
     @Test
     public void deposita_na_conta() {
-        Conta conta1 = new Conta(100.0, 1, 123456, this.cliente1);
+        ContaCorrente conta1 = new ContaCorrente(100.0, 1, 123456, this.cliente1);
 
         conta1.deposita(50);
 
@@ -85,17 +85,15 @@ public class ValidacoesBanco {
 
     @Test
     public void saca_da_conta() {
-        Conta conta1 = new Conta(100.0, 1, 123456, this.cliente1);
+        ContaCorrente conta1 = new ContaCorrente(100.0, 1, 123456, this.cliente1);
 
-        conta1.saca(50);
-
-        Assertions.assertEquals(50.0, conta1.getSaldo());
         Assertions.assertTrue(conta1.saca(50));
+        Assertions.assertEquals(49.8, conta1.getSaldo());
     }
 
     @Test
     public void tentaSacarValorMaiorQueSaldo() {
-        Conta conta1 = new Conta(100.0, 1, 123456, this.cliente1);
+        ContaCorrente conta1 = new ContaCorrente(100.0, 1, 123456, this.cliente1);
 
         conta1.saca(150);
 
@@ -105,8 +103,8 @@ public class ValidacoesBanco {
 
     @Test
     public void tentaTransferirValorMaiorQueSaldo() {
-        Conta conta1 = new Conta(100.0, 1, 123456, this.cliente1);
-        Conta conta2 = new Conta(100.0, 1, 123456, this.cliente2);
+        ContaCorrente conta1 = new ContaCorrente(100.0, 1, 123456, this.cliente1);
+        ContaCorrente conta2 = new ContaCorrente(100.0, 1, 123456, this.cliente2);
 
         conta1.transferencia(conta2, 200);
 
