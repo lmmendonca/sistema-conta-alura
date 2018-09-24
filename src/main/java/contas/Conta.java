@@ -1,4 +1,4 @@
-package conta;
+package contas;
 
 import dados.Cliente;
 

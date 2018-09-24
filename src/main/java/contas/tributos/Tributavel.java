@@ -1,4 +1,4 @@
-package conta.tributos;
+package contas.tributos;
 
 public interface Tributavel {
 

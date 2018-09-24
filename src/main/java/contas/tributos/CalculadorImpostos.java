@@ -1,6 +1,4 @@
-package conta.tributos;
-
-import conta.tributos.Tributavel;
+package contas.tributos;
 
 public class CalculadorImpostos implements Tributavel {
 

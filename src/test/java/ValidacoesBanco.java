@@ -1,6 +1,6 @@
-import conta.tributos.CalculadorImpostos;
-import conta.ContaCorrente;
-import conta.SeguroDeVida;
+import contas.tributos.CalculadorImpostos;
+import contas.ContaCorrente;
+import contas.SeguroDeVida;
 import dados.Cliente;
 import dados.Endereco;
 import org.junit.jupiter.api.Assertions;

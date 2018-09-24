@@ -1,6 +1,6 @@
-package conta;
+package contas;
 
-import conta.tributos.Tributavel;
+import contas.tributos.Tributavel;
 import dados.Cliente;
 
 public class SeguroDeVida  implements Tributavel {
