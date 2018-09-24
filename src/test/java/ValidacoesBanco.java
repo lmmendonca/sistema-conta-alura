@@ -112,4 +112,17 @@ public class ValidacoesBanco {
         Assertions.assertEquals(100.0, conta2.getSaldo());
         Assertions.assertFalse(conta1.transferencia(conta2, 200));
     }
+
+    @Test
+    public void validaTributaveis(){
+        ContaCorrente contaCorrente = new ContaCorrente(100, 1,2, cliente1);
+        SeguroDeVida seguroDeVida = new SeguroDeVida(SeguroDeVida.TipoSeguro.BASICO, cliente1);
+        CalculadorImpostos calculadorImpostos = new CalculadorImpostos();
+
+        calculadorImpostos.regista(seguroDeVida);
+        Assertions.assertEquals(10, calculadorImpostos.getValorImposto());
+
+        calculadorImpostos.regista(contaCorrente);
+        Assertions.assertEquals(11, calculadorImpostos.getValorImposto());
+    }
 }

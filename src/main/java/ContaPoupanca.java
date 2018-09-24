@@ -9,4 +9,8 @@ public class ContaPoupanca extends Conta{
         super.saldo += valor;
     }
 
+    @Override
+    public boolean saca(double valor) {
+        return super.saca(valor);
+    }
 }
