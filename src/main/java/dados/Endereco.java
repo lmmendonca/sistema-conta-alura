@@ -1,3 +1,5 @@
+package dados;
+
 public class Endereco {
 
     private String logradouro;

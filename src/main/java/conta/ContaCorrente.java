@@ -1,4 +1,9 @@
-public class ContaCorrente extends Conta implements Tributavel{
+package conta;
+
+import conta.tributos.Tributavel;
+import dados.Cliente;
+
+public class ContaCorrente extends Conta implements Tributavel {
 
     public ContaCorrente(double saldo, int agencia, int numero, Cliente titular) {
         super(saldo, agencia, numero, titular);

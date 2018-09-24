@@ -1,7 +1,12 @@
-public class SeguroDeVida  implements Tributavel{
+package conta;
+
+import conta.tributos.Tributavel;
+import dados.Cliente;
+
+public class SeguroDeVida  implements Tributavel {
 
     private TipoSeguro tipoSeguro;
-    private Cliente cliente;
+    private Cliente    cliente;
 
     public SeguroDeVida(TipoSeguro tipoSeguro, Cliente cliente){
         this.cliente = cliente;

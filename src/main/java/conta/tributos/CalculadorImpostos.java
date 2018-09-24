@@ -1,3 +1,7 @@
+package conta.tributos;
+
+import conta.tributos.Tributavel;
+
 public class CalculadorImpostos implements Tributavel {
 
     private double totalImposto;

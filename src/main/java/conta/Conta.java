@@ -1,3 +1,7 @@
+package conta;
+
+import dados.Cliente;
+
 public abstract class Conta {
 
     protected      double  saldo;
