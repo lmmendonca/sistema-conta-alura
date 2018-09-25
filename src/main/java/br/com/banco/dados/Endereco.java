@@ -1,4 +1,4 @@
-package dados;
+package br.com.banco.dados;
 
 public class Endereco {
 

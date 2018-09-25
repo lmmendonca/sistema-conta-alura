@@ -1,8 +1,8 @@
-import contas.tributos.CalculadorImpostos;
-import contas.ContaCorrente;
-import contas.SeguroDeVida;
-import dados.Cliente;
-import dados.Endereco;
+import br.com.banco.contas.tributos.CalculadorImpostos;
+import br.com.banco.contas.ContaCorrente;
+import br.com.banco.contas.SeguroDeVida;
+import br.com.banco.dados.Cliente;
+import br.com.banco.dados.Endereco;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -119,8 +119,8 @@ public class ValidacoesBanco {
     }
 
     @Test
-    public void validaTributaveis(){
-        ContaCorrente contaCorrente = new ContaCorrente(100, 1,2, cliente1);
+    public void validaTributaveis() {
+        ContaCorrente contaCorrente = new ContaCorrente(100, 1, 2, cliente1);
         SeguroDeVida seguroDeVida = new SeguroDeVida(SeguroDeVida.TipoSeguro.BASICO, cliente1);
         CalculadorImpostos calculadorImpostos = new CalculadorImpostos();
 

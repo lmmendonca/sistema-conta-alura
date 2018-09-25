@@ -1,6 +1,6 @@
-package contas;
+package br.com.banco.contas;
 
-import dados.Cliente;
+import br.com.banco.dados.Cliente;
 
 public class ContaPoupanca extends Conta {
 

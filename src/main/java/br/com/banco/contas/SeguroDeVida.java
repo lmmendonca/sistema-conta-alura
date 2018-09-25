@@ -1,7 +1,7 @@
-package contas;
+package br.com.banco.contas;
 
-import contas.tributos.Tributavel;
-import dados.Cliente;
+import br.com.banco.contas.tributos.Tributavel;
+import br.com.banco.dados.Cliente;
 
 public class SeguroDeVida  implements Tributavel {
 

@@ -1,4 +1,4 @@
-package contas.tributos;
+package br.com.banco.contas.tributos;
 
 public interface Tributavel {
 

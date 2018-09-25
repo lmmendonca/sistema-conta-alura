@@ -1,7 +1,13 @@
-package contas;
+package br.com.banco.contas;
 
-import dados.Cliente;
+import br.com.banco.dados.Cliente;
 
+/**
+ * Classe conta representativa do banco
+ *
+ * @author lmmendonca
+ * @version 0.0.1
+ */
 public abstract class Conta {
 
     protected      double  saldo;
@@ -10,6 +16,14 @@ public abstract class Conta {
     private        Cliente titular;
     private static int     total;
 
+    /**
+     * Contrutor padrão classe Contam
+     *
+     * @param saldo a ser inserido inicialmente
+     * @param agencia da conta
+     * @param numero da conta
+     * @param titular da conta
+     */
     public Conta(double saldo, int agencia, int numero, Cliente titular) {
         total++;
         this.saldo = saldo;
