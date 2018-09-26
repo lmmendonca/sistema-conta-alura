@@ -8,7 +8,7 @@ import br.com.banco.dados.Cliente;
  * @author lmmendonca
  * @version 0.0.1
  */
-public abstract class Conta {
+public abstract class Conta implements Comparable<Conta>{
 
     protected      double  saldo;
     private        int     agencia;
@@ -81,4 +81,11 @@ public abstract class Conta {
     public int getId() {
         return total;
     }
+
+    @Override
+    public int compareTo(Conta o) {
+        return Integer.compare(this.numero,o.numero);
+    }
+
+
 }
